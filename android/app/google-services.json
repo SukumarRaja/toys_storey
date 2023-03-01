@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "854828180567",
+    "project_id": "toystorey-aa96a",
+    "storage_bucket": "toystorey-aa96a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:854828180567:android:e1a2c8823191753d122f12",
+        "android_client_info": {
+          "package_name": "com.toystorey.hashseven"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "854828180567-3q8an6fn6ntpusiebl2dfmk3n6ehpmf0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVnkeNzxyppO-0fWDAB40IW3obLTkwRTs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "854828180567-3q8an6fn6ntpusiebl2dfmk3n6ehpmf0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
