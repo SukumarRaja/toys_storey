@@ -12,14 +12,14 @@ const InterstitialAdIdForAndroid = "ADD_INTERSTITIAL_ID_ANDROID";
 const interstitialAdIdForIos = "ADD_INTERSTITIAL_ID_IOS";
 
 /// PAYMENT METHOD ENABLE/DISABLE
-const IS_STRIPE = true;
+const IS_STRIPE = false;
 const IS_RAZORPAY = true;
-const IS_PAY_STACK = true;
-const IS_FLUTTER_WAVE = true;
-const IS_PAY_FROM_WALLET = true;
+const IS_PAY_STACK = false;
+const IS_FLUTTER_WAVE = false;
+const IS_PAY_FROM_WALLET = false;
 
 ///RazorPay
-const razorKey = "ADD_RAZOR_PAY_KEY";
+const razorKey = "o7WNKio459gltJk6daFmjZAB";
 
 ///StripPayment
 const stripPaymentKey = 'ADD_STRIPE_PAYMENT_KEY';

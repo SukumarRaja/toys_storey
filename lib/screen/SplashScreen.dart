@@ -25,7 +25,9 @@ class SplashScreenState extends State<SplashScreen> {
   }
 
   init() async {
-    setStatusBarColor(isHalloween ? mChristmasColor : primaryColor!, statusBarIconBrightness: Brightness.light, statusBarBrightness: Brightness.dark);
+    setStatusBarColor(isHalloween ? mChristmasColor : primaryColor!,
+        statusBarIconBrightness: Brightness.light,
+        statusBarBrightness: Brightness.dark);
     await Future.delayed(Duration(seconds: 2));
 
     String productId = await getProductIdFromNative();
@@ -57,8 +59,30 @@ class SplashScreenState extends State<SplashScreen> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          Spacer(),
           Image.asset(splash, height: 150, fit: BoxFit.cover),
-          Text(AppName, style: boldTextStyle(color: Theme.of(context).textTheme.subtitle2!.color, size: 26)),
+          Text(
+            AppName,
+            style: boldTextStyle(
+                color: Theme.of(context).textTheme.titleSmall!.color, size: 26),
+          ),
+          Spacer(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Powered by",
+                style: boldTextStyle(
+                    color: Theme.of(context).textTheme.displaySmall!.color,
+                    size: 14),
+              ),
+              SizedBox(width: 15),
+              Image.asset(
+                "images/toystorey/logo.webp",
+                width: width * 0.3,
+              )
+            ],
+          ),
         ],
       ).center(),
     );

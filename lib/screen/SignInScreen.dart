@@ -208,13 +208,13 @@ class SignInScreenState extends State<SignInScreen> {
           onGoogleSignInTap();
         }).visible(enableSignWithGoogle == true),
         8.width,
-        IconButton(
-          onPressed: () {
-            MobileNumberSignInScreen().launch(context);
-          },
-          icon: Icon(MaterialIcons.phone_android, size: 36),
-        ).visible(enableSignWithOtp == true),
-        8.width,
+        // IconButton(
+        //   onPressed: () {
+        //     MobileNumberSignInScreen().launch(context);
+        //   },
+        //   icon: Icon(MaterialIcons.phone_android, size: 36),
+        // ).visible(enableSignWithOtp == true),
+        // 8.width,
         IconButton(
           onPressed: () {
             appleLogIn();

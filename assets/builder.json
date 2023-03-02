@@ -86,8 +86,8 @@
   },
   "appsetup": {
     "appName": "toystorey",
-    "primaryColor": "#4358DD",
-    "secondaryColor": "#2635DF",
+    "primaryColor": "#ed3f00",
+    "secondaryColor": "#fff4f6",
     "backgroundColor": "#FCFDFD",
     "textPrimaryColor": "#212121",
     "textSecondaryColor": "#757575",

@@ -69,9 +69,9 @@ class AboutUsScreenState extends State<AboutUsScreen> {
                                 style: boldTextStyle(
                                     color: primaryColor, size: 20)),
                             8.height,
-                            Text('V ${snap.data!.version.validate()}',
-                                style: boldTextStyle(
-                                    color: primaryColor, size: 20)),
+                            // Text('V ${snap.data!.version.validate()}',
+                            //     style: boldTextStyle(
+                            //         color: primaryColor, size: 20)),
                           ],
                         );
                       }
@@ -103,8 +103,8 @@ class AboutUsScreenState extends State<AboutUsScreen> {
                     children: <Widget>[
                       InkWell(
                         onTap: () async {
-                          // redirectUrl(
-                          //     'https://wa.me/919585884353');
+                          redirectUrl(
+                              'https://wa.me/918072085685');
                         },
                         child: Container(
                           margin: EdgeInsets.only(left: 16),
@@ -113,29 +113,29 @@ class AboutUsScreenState extends State<AboutUsScreen> {
                         ),
                       ),
                       InkWell(
-                        // onTap: () => redirectUrl(getStringAsync(INSTAGRAM)),
+                        onTap: () => redirectUrl("https://www.instagram.com/toy_storeis/"),
                         child: Container(
                           padding: EdgeInsets.all(10),
                           child: Image.asset(ic_Inst, height: 35, width: 35),
                         ),
                       ),
+                      // InkWell(
+                      //   // onTap: () => redirectUrl(getStringAsync(TWITTER)),
+                      //   child: Container(
+                      //     padding: EdgeInsets.all(10),
+                      //     child: Image.asset(ic_Twitter, height: 35, width: 35),
+                      //   ),
+                      // ),
                       InkWell(
-                        // onTap: () => redirectUrl(getStringAsync(TWITTER)),
-                        child: Container(
-                          padding: EdgeInsets.all(10),
-                          child: Image.asset(ic_Twitter, height: 35, width: 35),
-                        ),
-                      ),
-                      InkWell(
-                        // onTap: () => redirectUrl(getStringAsync(FACEBOOK)),
+                        onTap: () => redirectUrl("https://www.facebook.com/Toy-Storey-107475691167727/"),
                         child: Container(
                           padding: EdgeInsets.all(10),
                           child: Image.asset(ic_Fb, height: 35, width: 35),
                         ),
                       ),
                       InkWell(
-                        // onTap: () =>
-                        //     redirectUrl('tel:${getStringAsync(CONTACT)}'),
+                        onTap: () =>
+                            redirectUrl('tel:8072085685'),
                         child: Container(
                           margin: EdgeInsets.only(right: 16),
                           padding: EdgeInsets.all(10),
@@ -158,9 +158,23 @@ class AboutUsScreenState extends State<AboutUsScreen> {
             //       return SizedBox();
             //     }),
             25.height,
-            Text(
-              "Copyrights@2023 ToysStorey",
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Copyrights@ 2023",
+                  style: boldTextStyle(
+                      color: Theme.of(context).textTheme.displaySmall!.color,
+                      size: 14),
+                ),
+                SizedBox(width: 15),
+                Image.asset(
+                  "images/toystorey/logo.webp",
+                  width: MediaQuery.of(context).size.width * 0.3,
+                )
+              ],
             ),
+
             2.height,
             Container(
               height: 60,
