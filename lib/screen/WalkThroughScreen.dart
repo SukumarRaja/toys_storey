@@ -30,10 +30,16 @@ class WalkThroughScreenState extends State<WalkThroughScreen> {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.asset(walk_Img1, height: context.height() * 0.4, fit: BoxFit.contain).paddingAll(24),
+            Image.asset(walk_Img1,
+                    height: context.height() * 0.4, fit: BoxFit.contain)
+                .paddingAll(24),
             20.height,
-            Text('Welcome to Toys Storey', style: boldTextStyle(size: 24)).paddingOnly(top: 16, left: 16),
-            Text('Lorem Ipsum is simply dummy text of the printing and typesetting industry. ', textAlign: TextAlign.center, style: secondaryTextStyle(size: 16)).paddingOnly(right: 24, left: 16, top: 8)
+            Text('Welcome to Toys Storey', style: boldTextStyle(size: 24))
+                .paddingOnly(top: 16, left: 16),
+            Text('Welcome to our app!',
+                    textAlign: TextAlign.center,
+                    style: secondaryTextStyle(size: 16))
+                .paddingOnly(right: 24, left: 16, top: 8)
           ],
         ),
       ),
@@ -43,10 +49,16 @@ class WalkThroughScreenState extends State<WalkThroughScreen> {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.asset(walk_Img2, height: context.height() * 0.4, fit: BoxFit.contain).paddingAll(24),
+            Image.asset(walk_Img2,
+                    height: context.height() * 0.4, fit: BoxFit.contain)
+                .paddingAll(24),
             20.height,
-            Text('Checkout', style: boldTextStyle(size: 24)).paddingOnly(top: 16, left: 16),
-            Text('Lorem Ipsum is simply dummy text of the printing and typesetting industry. ', textAlign: TextAlign.center, style: secondaryTextStyle(size: 16)).paddingOnly(right: 24, left: 16, top: 8)
+            Text('Checkout', style: boldTextStyle(size: 24))
+                .paddingOnly(top: 16, left: 16),
+            Text('Start shopping now and enjoy 50% off your first purchase',
+                    textAlign: TextAlign.center,
+                    style: secondaryTextStyle(size: 16))
+                .paddingOnly(right: 24, left: 16, top: 8)
           ],
         ),
       ),
@@ -56,10 +68,16 @@ class WalkThroughScreenState extends State<WalkThroughScreen> {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.asset(walk_Img3, height: context.height() * 0.4, fit: BoxFit.contain).paddingAll(24),
+            Image.asset(walk_Img3,
+                    height: context.height() * 0.4, fit: BoxFit.contain)
+                .paddingAll(24),
             20.height,
-            Text('Get Your Order', style: boldTextStyle(size: 24)).paddingOnly(top: 16, left: 16),
-            Text('Lorem Ipsum is simply dummy text of the printing and typesetting industry. ', textAlign: TextAlign.center, style: secondaryTextStyle(size: 16)).paddingOnly(right: 24, left: 16, top: 8)
+            Text('Get Your Order', style: boldTextStyle(size: 24))
+                .paddingOnly(top: 16, left: 16),
+            Text('Your one-stop-shop for all your favorite products',
+                    textAlign: TextAlign.center,
+                    style: secondaryTextStyle(size: 16))
+                .paddingOnly(right: 24, left: 16, top: 8)
           ],
         ),
       )
@@ -95,23 +113,42 @@ class WalkThroughScreenState extends State<WalkThroughScreen> {
                     selectedIndex = index;
                     setState(() {});
                   }),
-              AnimatedPositioned(duration: Duration(seconds: 1), bottom: 70, left: 0, right: 0, child: DotIndicator(pages: pages, indicatorColor: primaryColor, pageController: _pageController)),
+              AnimatedPositioned(
+                  duration: Duration(seconds: 1),
+                  bottom: 70,
+                  left: 0,
+                  right: 0,
+                  child: DotIndicator(
+                      pages: pages,
+                      indicatorColor: primaryColor,
+                      pageController: _pageController)),
               Positioned(
                   child: AnimatedCrossFade(
-                      firstChild:
-                          Container(child: Text('Get Started', style: boldTextStyle(color: white)), padding: EdgeInsets.fromLTRB(16, 8, 16, 8), decoration: BoxDecoration(color: primaryColor, borderRadius: radius(8)))
-                              .onTap(() {
+                      firstChild: Container(
+                              child: Text('Get Started',
+                                  style: boldTextStyle(color: white)),
+                              padding: EdgeInsets.fromLTRB(16, 8, 16, 8),
+                              decoration: BoxDecoration(
+                                  color: primaryColor, borderRadius: radius(8)))
+                          .onTap(() {
                         DashBoardScreen().launch(context, isNewTask: true);
                       }),
                       secondChild: SizedBox(),
                       duration: Duration(milliseconds: 300),
                       firstCurve: Curves.easeIn,
                       secondCurve: Curves.easeOut,
-                      crossFadeState: selectedIndex == (pages.length - 1) ? CrossFadeState.showFirst : CrossFadeState.showSecond),
+                      crossFadeState: selectedIndex == (pages.length - 1)
+                          ? CrossFadeState.showFirst
+                          : CrossFadeState.showSecond),
                   bottom: 20,
                   right: 20),
               Positioned(
-                  child: AnimatedContainer(duration: Duration(seconds: 1), child: Text('Skip', style: boldTextStyle(color: primaryColor)), padding: EdgeInsets.fromLTRB(16, 8, 16, 8)).onTap(() {
+                  child: AnimatedContainer(
+                          duration: Duration(seconds: 1),
+                          child: Text('Skip',
+                              style: boldTextStyle(color: primaryColor)),
+                          padding: EdgeInsets.fromLTRB(16, 8, 16, 8))
+                      .onTap(() {
                     DashBoardScreen().launch(context, isNewTask: true);
                   }),
                   right: 8,
